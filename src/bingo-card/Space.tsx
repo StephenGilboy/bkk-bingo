@@ -13,8 +13,11 @@ const BingoCardSpace: React.FC<{value: string}> = (props) => {
     <div
       style={{
         backgroundColor: spaceColor,
-        width: '100px',
-        height: '100px',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: '150px',
+        height: '150px',
         cursor: 'pointer',
       }}
       onClick={handleClick}

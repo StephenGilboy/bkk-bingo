@@ -2,18 +2,52 @@ import React from 'react';
 import BingoCardSpace from './Space';
 
 const BingoCard: React.FC = () => {
-  const numbers: number[] = Array.from({ length: 75 }, (_, i) => i + 1);
-  const shuffledNumbers: number[] = shuffle(numbers);
-  const bingoCard: number[][] = [];
+  const numbers: string[] = [
+    'pivot',
+    'zoom-out',
+    'synergy',
+    'streamline',
+    'deliverables',
+    'milestones',
+    'agile',
+    'scrum',
+    'sprint',
+    'stakeholders',
+    'roadmap',
+    'alignment',
+    'collaboration',
+    'communication',
+    'efficiency',
+    'prioritization',
+    'risk management',
+    'resource allocation',
+    'scope creep',
+    'task management',
+    'teamwork',
+    'transparency',
+    'workstream',
+    'workflow',
+    'benchmarking',
+    'continuous improvement',
+    'dependencies',
+    'escalation',
+    'gantt chart',
+    'kickoff meeting',
+    'project lifecycle',
+    'status report',
+    'work breakdown structure',
+  ];
+
+  const shuffledNumbers: string[] = shuffle(numbers);
+  const bingoCard: string[][] = [];
 
   for (let i = 0; i < 5; i++) {
-    const row: number[] = shuffledNumbers.splice(0, 5);
+    const row: string[] = shuffledNumbers.splice(0, 5);
     bingoCard.push(row);
   }
 
   return (
     <div>
-      <h1>Bingo Card</h1>
       <table>
         <tbody>
           {bingoCard.map((row, rowIndex) => (
